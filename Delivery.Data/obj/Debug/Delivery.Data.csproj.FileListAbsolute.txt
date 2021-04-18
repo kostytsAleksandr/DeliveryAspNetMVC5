@@ -1,0 +1,2 @@
+C:\Users\Aleksandr\source\A-Level\DeliveryAspNetMVC5\Delivery.Data\obj\Debug\Delivery.Data.csprojAssemblyReference.cache
+C:\Users\Aleksandr\source\A-Level\DeliveryAspNetMVC5\Delivery.Data\obj\Debug\Delivery.Data.csproj.CoreCompileInputs.cache
