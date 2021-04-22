@@ -9,6 +9,8 @@ namespace Delivery.Data.Contracts
 {
     public interface IClientRepository
     {
+        IReadOnlyCollection<Client> GetAll();
+        Client GetById(int id);
         void CreateParcel(Parcel model);
         void GetParselInfo(Parcel model);
         void GetParcel(Parcel model);

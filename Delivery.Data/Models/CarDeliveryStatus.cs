@@ -9,6 +9,7 @@ namespace Delivery.Data.Models
     public class CarDeliveryStatus
     {
         public int Id { get; set; }
+        public CarDeliveryStatus status { get; set; }
 
         public Department Department { get; set; }
         public int DepartmentId { get; set; }

@@ -10,7 +10,6 @@ namespace Delivery.Data.Models
     {
         public int Id { get; set; }
         public int CarryingCapacity { get; set; }
-        public bool IsFree { get; set; }
 
         public ICollection<CarDeliveryStatus> Statuses { get; set; }
     }

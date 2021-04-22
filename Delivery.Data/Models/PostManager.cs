@@ -13,5 +13,6 @@ namespace Delivery.Data.Models
         public string LastName { get; set; }
 
         public ICollection<Parcel> Parcels { get; set; }
+        public ICollection<CarDeliveryStatus> CarDeliveryStatuses { get; set; }
     }
 }

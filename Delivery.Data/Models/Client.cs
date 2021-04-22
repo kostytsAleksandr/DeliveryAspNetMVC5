@@ -12,6 +12,7 @@ namespace Delivery.Data.Models
         public string Name { get; set; }
         public string LastName { get; set; }
         public string Phone { get; set; }
+        public int CountBadParcels { get; set; }
 
         public ICollection<Parcel> Parcels { get; set; }
     }

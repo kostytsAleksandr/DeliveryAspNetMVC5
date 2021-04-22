@@ -13,8 +13,11 @@ namespace Delivery.Data.Models
         public decimal Costs { get; set; }      
         public ParcelState State { get; set; }
 
-        public int ClientId { get; set; }
-        public Client Client { get; set; }
+        public int ClientWhoSendId { get; set; }
+        public Client ClientWhoSend { get; set; }
+
+        public int ClientWhoGetId { get; set; }
+        public Client ClientWhoGet { get; set; }
 
         public int? PostManagerId { get; set; }
         public PostManager PostManager { get; set; }

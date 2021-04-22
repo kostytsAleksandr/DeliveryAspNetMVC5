@@ -4,14 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Delivery.Data.Models
+namespace Delivery.Data.Models.Enums
 {
-    public enum ParcelState
+    public enum CarDeliveryState
     {
-        taken,
-        inRoud,
         delivered,
-        received,
-        canceled
+        inRoad,
     }
 }

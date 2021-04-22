@@ -9,8 +9,7 @@ namespace Delivery.Data.Contracts
 {
     public interface IDriverRepository
     {
-        void ChooseDriver(Driver driver, Parcel parcel);
-        void GetAllParselsInfo();
-
+        void UpdateCarDeliveryStatus(CarDeliveryStatus model);
+        void UpdateParcelStatus(Parcel model);
     }
 }
