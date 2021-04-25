@@ -25,10 +25,10 @@ namespace Delivery.Data.Models
         public int? DriverId { get; set; }
         public Driver Driver { get; set; }
 
-        public int FromDepartmentId { get; set; }
-        public Department From { get; set; }
+        public int DepartmentFromId { get; set; }
+        public Department DepartmentFrom { get; set; }
 
-        public int ToDepartmentId { get; set; }
-        public Department To { get; set; }
+        public int DepartmentToId { get; set; }
+        public Department DepartmentTo { get; set; }
     }
 }

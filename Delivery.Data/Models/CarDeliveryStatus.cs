@@ -16,5 +16,8 @@ namespace Delivery.Data.Models
 
         public Car Car { get; set; }
         public int CarId { get; set; }
+
+        public PostManager PostManager { get; set; }
+        public int? PostManagerId { get; set; }
     }
 }

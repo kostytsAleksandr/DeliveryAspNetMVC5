@@ -14,8 +14,8 @@ namespace Delivery.Data.Models
         public int CityId { get; set; }
         public City City { get; set; }
 
-        public ICollection<Parcel> AsDestination { get; set; }//to
-        public ICollection<Parcel> AsSource { get; set; }//from
+        public ICollection<Parcel> ParcelsFrom { get; set; }
+        public ICollection<Parcel> ParcelsTo { get; set; }
 
         public ICollection<CarDeliveryStatus> Statuses { get; set; }
     }
