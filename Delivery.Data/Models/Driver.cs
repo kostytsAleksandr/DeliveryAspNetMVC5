@@ -10,8 +10,12 @@ namespace Delivery.Data.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public string LastName { get; set; }      
+        public string LastName { get; set; }
+
+        public int CarId { get; set; }
+        public Car Car { get; set; }
 
         public ICollection<Parcel> ParcelsInCar { get; set; }
+        public ICollection<CarDeliveryStatus> Statuses { get; set; }
     }
 }

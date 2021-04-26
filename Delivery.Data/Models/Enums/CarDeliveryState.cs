@@ -8,7 +8,7 @@ namespace Delivery.Data.Models.Enums
 {
     public enum CarDeliveryState
     {
-        delivered,
         inRoad,
+        delivered,
     }
 }

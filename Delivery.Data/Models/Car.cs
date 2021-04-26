@@ -11,6 +11,6 @@ namespace Delivery.Data.Models
         public int Id { get; set; }
         public int CarryingCapacity { get; set; }
 
-        public ICollection<CarDeliveryStatus> Statuses { get; set; }
+        public ICollection<Driver> Drivers { get; set; }
     }
 }

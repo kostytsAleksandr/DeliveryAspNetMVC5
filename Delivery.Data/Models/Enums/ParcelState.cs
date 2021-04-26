@@ -9,7 +9,7 @@ namespace Delivery.Data.Models
     public enum ParcelState
     {
         taken,
-        inRoud,
+        inRoad,
         delivered,
         received,
         canceled

@@ -19,7 +19,7 @@ namespace Delivery.Data.Models
         public int ClientWhoGetId { get; set; }
         public Client ClientWhoGet { get; set; }
 
-        public int? PostManagerId { get; set; }
+        public int PostManagerId { get; set; }
         public PostManager PostManager { get; set; }
 
         public int? DriverId { get; set; }
