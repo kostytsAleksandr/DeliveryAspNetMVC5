@@ -13,6 +13,7 @@ namespace Delivery.Data.Contracts
         Client GetClientById(int id);
         void CreateParcel(Parcel model);
         Parcel GetParcelById(int pacelId);
-        void GetParcel(Parcel model); 
+        void GetParcel(Parcel model);
+        void AddBadParcel(Parcel model);
     }
 }

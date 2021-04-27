@@ -9,8 +9,6 @@ namespace Delivery.Data.Contracts
 {
     public interface IManagersRepository
     {
-        void AddBadParcel(Parcel model);
-        void DeleteClient(Client model);
         void CreateCity(City model);
         void CreateDepartment(Department model);
         bool SetDriverForNewParcel(CarDeliveryStatus carDeliveryStatus, Parcel parcel);

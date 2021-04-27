@@ -10,6 +10,14 @@ namespace Delivery.Data.Repositories
 {
     public class ClientsRepository : IClientsRepository
     {
+        public void AddBadParcel(Parcel model)
+        {
+            using (var ctx = new DeliveriesContext())
+            {
+                ctx.Parcels.FirstOrDefault(x => x.Id == model.Id).ClientWhoSend.CountBadParcels++;
+                ctx.SaveChanges();
+            }
+        }
         public void CreateParcel(Parcel model)
         {
             using (var ctx = new DeliveriesContext())

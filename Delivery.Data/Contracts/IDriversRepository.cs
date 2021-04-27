@@ -11,5 +11,6 @@ namespace Delivery.Data.Contracts
     {
         void UpdateDeliveryStatusBeforeWay(Parcel parcel, CarDeliveryStatus carDeliveryStatus);
         void UpdateDeliveryStatusAfterWay(Parcel parcel, CarDeliveryStatus carDeliveryStatus);
+        Dictionary<int, int> DriverTrips(int driverId);
     }
 }

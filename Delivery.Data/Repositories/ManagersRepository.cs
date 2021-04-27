@@ -12,15 +12,6 @@ namespace Delivery.Data.Repositories
 {
     public class ManagersRepository : IManagersRepository
     {
-        public void AddBadParcel(Parcel model)
-        {
-            using (var ctx = new DeliveriesContext())
-            {
-                ctx.Parcels.FirstOrDefault(x => x.Id == model.Id).ClientWhoSend.CountBadParcels++;
-                ctx.SaveChanges();
-            }
-        }
-
         public void CreateCity(City model)
         {
             using (var ctx = new DeliveriesContext())
@@ -59,19 +50,11 @@ namespace Delivery.Data.Repositories
         {
             using (var ctx = new DeliveriesContext())
             {
-                parcel.Driver = ctx.CarDeliveryStatuses
+                Driver driver= ctx.CarDeliveryStatuses
                 .FirstOrDefault(x => x.State == (CarDeliveryState)1 && x.DepartmentId == parcel.DepartmentFromId).Driver;
+                ctx.Parcels.FirstOrDefault(x => x.Id == parcel.Id).Driver = driver;
                 ctx.SaveChanges();
-                return parcel.Driver != null;
-            }
-        }
-
-        public void DeleteClient(Client model)
-        {
-            using (var ctx = new DeliveriesContext())
-            {
-                ctx.Clients.Remove(model);
-                ctx.SaveChanges();
+                return driver != null;
             }
         }
 
