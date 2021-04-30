@@ -1,0 +1,29 @@
+﻿@model DeliveryAspNetMVC5.Models.ParcelPostModel
+
+@{
+    ViewBag.Title = "CreateParcel";
+}
+
+@using (Html.BeginForm("Create", "Parcel", FormMethod.Post))
+{
+    <h1>Please, create parcel</h1>
+    @Html.LabelFor(x => x.Costs)
+    @Html.TextBoxFor(x => x.Costs)
+    <br />
+    @Html.LabelFor(x => x.ClientWhoSendId)
+    @Html.TextBoxFor(x => x.ClientWhoSendId)
+    <br />
+    @Html.LabelFor(x => x.ClientWhoGetId)
+    @Html.TextBoxFor(x => x.ClientWhoGetId)
+    <br />
+    @Html.LabelFor(x => x.DepartmentFromId)
+    @Html.TextBoxFor(x => x.DepartmentFromId)
+    <br />
+    @Html.LabelFor(x => x.Weight)
+    @Html.TextBoxFor(x => x.Weight)
+    <br />
+    @Html.LabelFor(x => x.DepartmentToId)
+    @Html.TextBoxFor(x => x.DepartmentToId)
+    <br />
+    <input type="submit" value="Отправить" />
+}

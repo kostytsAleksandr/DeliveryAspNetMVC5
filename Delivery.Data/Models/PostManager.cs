@@ -12,6 +12,8 @@ namespace Delivery.Data.Models
         public string Name { get; set; }
         public string LastName { get; set; }
 
+        public ApplicationUser ApplicationUser { get; set; }
+
         public ICollection<Parcel> Parcels { get; set; }
         public ICollection<CarDeliveryStatus> CarDeliveryStatuses { get; set; }
     }

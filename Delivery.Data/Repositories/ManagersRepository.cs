@@ -3,6 +3,7 @@ using Delivery.Data.Models;
 using Delivery.Data.Models.Enums;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Data.Entity;
 using System.Linq;
 using System.Text;
@@ -45,16 +46,23 @@ namespace Delivery.Data.Repositories
                 return ctx.Parcels.Where(x => x.DepartmentFromId == departmentId).AsNoTracking().ToList();
             }
         }
-
-        public bool SetDriverForNewParcel(CarDeliveryStatus carDeliveryStatus, Parcel parcel)
+    
+        public IReadOnlyCollection<Parcel> SetDriverForNewParcel()
         {
+          Collection<Parcel> parcelsWithDrivers = new Collection<Parcel>();
+
             using (var ctx = new DeliveriesContext())
             {
-                Driver driver= ctx.CarDeliveryStatuses
-                .FirstOrDefault(x => x.State == (CarDeliveryState)1 && x.DepartmentId == parcel.DepartmentFromId).Driver;
-                ctx.Parcels.FirstOrDefault(x => x.Id == parcel.Id).Driver = driver;
+                ICollection<Parcel> parcelsWithoutDrivers = ctx.Parcels.Where(x => x.Driver == null).ToList();
+                foreach (var parcel in parcelsWithoutDrivers)
+                {
+                    Driver driver = ctx.CarDeliveryStatuses
+               .FirstOrDefault(x => x.State == (CarDeliveryState)1 && x.DepartmentId == parcel.DepartmentFromId).Driver;
+                    ctx.Parcels.FirstOrDefault(x => x.Id == parcel.Id).Driver = driver;
+                    parcelsWithDrivers.Add(parcel);
+                }              
                 ctx.SaveChanges();
-                return driver != null;
+                return parcelsWithDrivers;
             }
         }
 

@@ -128,3 +128,9 @@ C:\Users\Aleksandr\source\A-Level\DeliveryAspNetMVC5\DeliveryAspNetMVC5\bin\Syst
 C:\Users\Aleksandr\source\A-Level\DeliveryAspNetMVC5\DeliveryAspNetMVC5\bin\System.Numerics.Vectors.xml
 C:\Users\Aleksandr\source\A-Level\DeliveryAspNetMVC5\DeliveryAspNetMVC5\bin\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\Aleksandr\source\A-Level\DeliveryAspNetMVC5\DeliveryAspNetMVC5\bin\System.Threading.Tasks.Extensions.xml
+C:\Users\Aleksandr\source\A-Level\DeliveryAspNetMVC5\DeliveryAspNetMVC5\bin\Delivery.Domain.dll
+C:\Users\Aleksandr\source\A-Level\DeliveryAspNetMVC5\DeliveryAspNetMVC5\bin\Delivery.Data.dll
+C:\Users\Aleksandr\source\A-Level\DeliveryAspNetMVC5\DeliveryAspNetMVC5\bin\Delivery.Domain.pdb
+C:\Users\Aleksandr\source\A-Level\DeliveryAspNetMVC5\DeliveryAspNetMVC5\bin\Delivery.Domain.dll.config
+C:\Users\Aleksandr\source\A-Level\DeliveryAspNetMVC5\DeliveryAspNetMVC5\bin\Delivery.Data.pdb
+C:\Users\Aleksandr\source\A-Level\DeliveryAspNetMVC5\DeliveryAspNetMVC5\bin\Delivery.Data.dll.config

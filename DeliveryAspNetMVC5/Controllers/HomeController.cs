@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,6 +12,10 @@ namespace DeliveryAspNetMVC5.Controllers
     {
         public ActionResult Index()
         {
+            //UserManager<IdentityUser> roleManager;
+
+            //roleManager.AddToRole()
+
             return View();
         }
 

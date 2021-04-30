@@ -57,6 +57,8 @@ namespace DeliveryAspNetMVC5.Controllers
         [AllowAnonymous]
         public ActionResult Login(string returnUrl)
         {
+            //_userManager.AddToRole("userId", "Driver");
+
             ViewBag.ReturnUrl = returnUrl;
             return View();
         }
@@ -86,7 +88,7 @@ namespace DeliveryAspNetMVC5.Controllers
                     return RedirectToAction("SendCode", new { ReturnUrl = returnUrl, RememberMe = model.RememberMe });
                 case SignInStatus.Failure:
                 default:
-                    ModelState.AddModelError("", "Invalid login attempt.");
+                    ModelState.AddModelError("", "Invalid login attempt!!!.");
                     return View(model);
             }
         }

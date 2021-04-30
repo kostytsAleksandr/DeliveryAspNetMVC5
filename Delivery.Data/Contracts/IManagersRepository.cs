@@ -11,7 +11,7 @@ namespace Delivery.Data.Contracts
     {
         void CreateCity(City model);
         void CreateDepartment(Department model);
-        bool SetDriverForNewParcel(CarDeliveryStatus carDeliveryStatus, Parcel parcel);
+        IReadOnlyCollection<Parcel> SetDriverForNewParcel();
         IReadOnlyCollection<Parcel> GetAllParselsInfo();
         IReadOnlyCollection<Parcel> GetParcelsByDepartmentFrom(int departmentId);
         void CreateCar(Car model);

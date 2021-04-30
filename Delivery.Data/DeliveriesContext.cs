@@ -1,5 +1,5 @@
 ﻿using Delivery.Data.Models;
-using DeliveryAspNetMVC5.Models;
+//using DeliveryAspNetMVC5.Models;
 using Microsoft.AspNet.Identity.EntityFramework;
 using System;
 using System.Collections.Generic;
@@ -89,6 +89,12 @@ namespace Delivery.Data
                .WithMany(x => x.Drivers)
                .HasForeignKey(x => x.CarId)
                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<PostManager>()
+            .HasRequired<ApplicationUser>(x => x.ApplicationUser)
+            .WithMany(x => x.PostManagers)
+            //.HasForeignKey(x => x.ApplicattionUserId)
+            .WillCascadeOnDelete(false);
         }
 
     }

@@ -14,6 +14,9 @@ namespace Delivery.Data.Models
         public string Phone { get; set; }
         public int CountBadParcels { get; set; }
 
+        public ApplicationUser ApplicationUser { get; set; }
+        public int ApplicattionUserId { get; set; }
+
         public ICollection<Parcel> ParcelsSent { get; set; }
         public ICollection<Parcel> ParcelsGot { get; set; }
     }

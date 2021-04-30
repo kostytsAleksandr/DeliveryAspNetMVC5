@@ -1,0 +1,14 @@
+﻿@model DeliveryAspNetMVC5.Models.ViewModels.GetParcelsViewModel
+
+@{
+    ViewBag.Title = "GetAllParcels";
+}
+
+<ul>
+    @foreach (var parcel in Model.ParcelViews)
+    {
+    <li>
+        ID: @parcel.Id Costs: @parcel.Costs State: @parcel.State.ToString() Weight: @parcel.Weight
+    </li>
+    }
+</ul>

@@ -15,6 +15,8 @@ namespace Delivery.Data.Models
         public int CarId { get; set; }
         public Car Car { get; set; }
 
+        public ApplicationUser ApplicationUser { get; set; }
+
         public ICollection<Parcel> ParcelsInCar { get; set; }
         public ICollection<CarDeliveryStatus> Statuses { get; set; }
     }

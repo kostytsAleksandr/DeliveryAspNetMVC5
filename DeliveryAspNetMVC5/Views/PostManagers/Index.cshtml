@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<div>
+    <ul>
+        <li>@Html.ActionLink("Get All parcels info", "GetAllParcels", "Postmanagers", new { area = "" }, new { @class = "navbar-brand" })</li>
+        <li>@Html.ActionLink("Add city", "AddCity", "Postmanagers", new { area = "" }, new { @class = "navbar-brand" })</li>
+        <li>@Html.ActionLink("Add department", "AddDepartment", "Postmanagers", new { area = "" }, new { @class = "navbar-brand" })</li>
+        <li>@Html.ActionLink("Set driver for new parcel", "SetDriverForNewparcel", "Postmanagers", new { area = "" }, new { @class = "navbar-brand" })</li>
+    </ul>
+</div>
+

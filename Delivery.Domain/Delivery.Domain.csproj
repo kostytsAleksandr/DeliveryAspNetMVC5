@@ -60,7 +60,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\ClientsService.cs" />
     <Compile Include="Services\DriversService.cs" />
-    <Compile Include="Services\ManagersServices.cs" />
+    <Compile Include="Services\ManagersService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Delivery.Data\Delivery.Data.csproj">
@@ -69,6 +69,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

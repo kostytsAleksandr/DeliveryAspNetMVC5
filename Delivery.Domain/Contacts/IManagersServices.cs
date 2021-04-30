@@ -11,7 +11,7 @@ namespace Delivery.Domain.Contracts
     {
         void CreateCity(CityModel model);
         void CreateDepartment(DepartmentModel model);
-        bool SetDriverForNewParcel(CarDeliveryStatusModel carDeliveryStatus, ParcelModel parcel);
+        IReadOnlyCollection<ParcelModel> SetDriverForNewParcel();
         IReadOnlyCollection<ParcelModel> GetAllParselsInfo();
         IReadOnlyCollection<ParcelModel> GetParcelsByDepartmentFrom(int departmentId);
         void CreateCar(CarModel model);

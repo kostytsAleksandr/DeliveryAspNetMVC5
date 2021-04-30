@@ -31,9 +31,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AutoMapper, Version=10.0.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
-      <HintPath>..\DeliveryAspNetMVC5\packages\AutoMapper.10.1.1\lib\net461\AutoMapper.dll</HintPath>
-    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\DeliveryAspNetMVC5\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -61,11 +58,12 @@
     <Compile Include="Contracts\IDriversRepository.cs" />
     <Compile Include="Contracts\IManagersRepository.cs" />
     <Compile Include="DeliveriesContext.cs" />
-    <Compile Include="Migrations\202104261201354_InitialCreate.cs" />
-    <Compile Include="Migrations\202104261201354_InitialCreate.Designer.cs">
-      <DependentUpon>202104261201354_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\202104291622392_InitialCreate.cs" />
+    <Compile Include="Migrations\202104291622392_InitialCreate.Designer.cs">
+      <DependentUpon>202104291622392_InitialCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\ApplicationUser.cs" />
     <Compile Include="Models\Car.cs" />
     <Compile Include="Models\CarDeliveryStatus.cs" />
     <Compile Include="Models\City.cs" />
@@ -82,18 +80,12 @@
     <Compile Include="Repositories\ManagersRepository.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DeliveryAspNetMVC5\DeliveryAspNetMVC5.csproj">
-      <Project>{64320742-f42c-41cb-8ecd-275dd1555e4c}</Project>
-      <Name>DeliveryAspNetMVC5</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202104261201354_InitialCreate.resx">
-      <DependentUpon>202104261201354_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202104291622392_InitialCreate.resx">
+      <DependentUpon>202104291622392_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

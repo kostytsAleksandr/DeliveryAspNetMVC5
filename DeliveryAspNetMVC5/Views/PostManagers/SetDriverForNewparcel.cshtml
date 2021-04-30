@@ -1,0 +1,15 @@
+﻿@model DeliveryAspNetMVC5.Models.ViewModels.GetParcelsWithDriversViewModel
+
+@{
+    ViewBag.Title = "SetDriverForNewparcel";
+}
+<h3>Were added drivers on this parcels:</h3>
+
+<ul>
+@foreach (var parcel in Model.ParcelWithDriverViews)
+{
+    <li>
+        ID: @parcel.Id Costs: @parcel.Costs State: @parcel.State.ToString() Weight: @parcel.Weight Driver ID:@parcel.DriverId
+    </li>
+}
+</ul>
